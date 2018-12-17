@@ -7,7 +7,7 @@ const compiler = webpack(config);
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const webpackHotSeverMiddleware= require('webpack-hot-server-middleware');
-
+const customSetup = require('./customSetup');
 
 /**
  * npm install webpack-dev-middleware

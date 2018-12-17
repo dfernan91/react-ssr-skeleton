@@ -1,0 +1,90 @@
+@import "malltinaTheme";
+@import "resonsive";
+@import "button";
+//
+// ---------------- base --------------------
+//
+
+html, body {
+    color       : #474747;
+    direction   : rtl;
+    font-family : IRANSans;
+    text-align  : right;
+}
+
+
+.ltr {
+    direction : ltr;
+}
+
+
+a {
+    cursor          : pointer;
+    text-decoration : underline;
+}
+
+
+//
+// ---------------- form --------------------
+//
+
+// restyle bootstrap form and input
+
+// Removing input background colour for Chrome autocomplete
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    box-shadow         : 0 0 0px 1000px white inset;
+    -webkit-box-shadow : 0 0 0px 1000px white inset;
+}
+
+
+label {
+    cursor        : pointer;
+    font-size     : 12px;
+    margin-bottom : 0;
+    color         : #888888;
+    &.form-group {
+        color     : #8c8c8c;
+        font-size : 14px;
+    }
+}
+
+
+.form-control {
+    //font-size         : 16px;
+    //line-height       : 24px;
+    //&:not(.bt-v){
+    //    border-top-color  : transparent;
+    //}
+    //&:not(.bl-v){
+    //    border-left-color : transparent;
+    //}
+    //border-radius     : 0 0 3px 0;
+    &:focus {
+        border-color  : #658fcf;
+        outline       : 0;
+        border-radius : 4px;
+        box-shadow    : none;
+        //box-shadow    : 0 0 0 1px #00337a;
+    }
+}
+
+
+.form-group {
+    position : relative;
+}
+
+
+input:-webkit-autofill {
+    -webkit-box-shadow : 0 0 0 30px white inset;
+}
+
+
+//
+// ---------------- modal --------------------
+//
+.modal-backdrop.show {
+    opacity : 0.2;
+}

@@ -1,0 +1,93 @@
+//################# Malltina Bootstrap Theme #####################
+// define bootstrap checkbox, input, dropdown yellow theme
+// yellow is default color in malltina
+
+//yellow focus theme
+%yellowFocusShadow {
+    border-color : #eec618 !important;
+    box-shadow   : 0 0 0 0.3rem rgba(253, 183, 0, 0.2) !important;
+}
+
+
+//
+//---------------checkbox---------------------
+// like warranty in product page
+.maltina-theme .custom-control-input {
+    &:checked ~ .custom-control-label::before {
+        background-color : #ff9a00;
+    }
+    //&:active ~ .custom-control-label::before {}
+    &:focus ~ .custom-control-label::before {
+        box-shadow : 0 0 0 0.2rem rgba(253, 183, 0, 0.2) !important;
+    }
+}
+
+
+//
+//---------------btn---------------------
+// like buy botton in product page
+.maltina-theme.btn {
+    background          : #fdd518;
+    border              : 2px solid #eaba09;
+    border-bottom-width : 4px;
+    border-radius       : 8px;
+    border-top-width    : 1px;
+    color               : #001f4a;
+    //
+    &:hover {
+        background   : #fde308;
+        border-color : #e4c809;
+    }
+    &:disabled {
+        background : #fdfcfb;
+        border     : 1px solid #aba8a6;
+    }
+    //
+    &:focus,
+    &.focus {
+        @extend %yellowFocusShadow;
+    }
+}
+
+
+//
+//---------------dropdown---------------------
+// like product options in product page
+.maltina-theme {
+    &.dropdown {
+        .btn {
+            background-color : #ffffff;
+            border           : 1px solid #ced4da;
+            color            : #001f4b;
+            //
+            &:focus,
+            &.focus {
+                @extend %yellowFocusShadow;
+            }
+        }
+        .btn-block {
+            width : 100%;
+        }
+    }
+    // change color of dropdown <a> item. used in Product>Sidebar>Options componenent
+    .dropdown-item {
+        text-decoration : none;
+        &:hover, &:focus {
+            background-color : rgba(253, 183, 0, 0.2);
+        }
+        &.active, &:active {
+            color : #dd5e2e;
+        }
+    }
+    a.dropdown-item:focus {
+        outline-color : #fdd518 !important;
+    }
+}
+
+
+//----------------textarea--------------------
+//
+.maltina-theme.form-control:focus {
+    @extend %yellowFocusShadow;
+}
+

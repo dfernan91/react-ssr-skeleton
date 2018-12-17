@@ -1,0 +1,202 @@
+@import "../../module/module";
+
+
+.btn {
+    background-color : #ffffff;
+    border           : 2px solid #f4f4f4 !important;
+    border-bottom    : 4px solid #f4f4f4 !important;
+    border-color     : #f4f4f4;
+    border-radius    : 10px;
+    color            : #7f7f7f;
+    font-size        : 14px;
+    font-weight      : 500;
+    &:focus {
+        box-shadow : none !important;
+    }
+}
+
+
+//--------------Primary--------------------
+.btn-primary {
+    $bgColor : #1f7da8;
+    $borderColor : darken($bgColor, 7.5%);
+    background-color : $bgColor;
+    border-color     : $borderColor !important;
+    color            : #ffffff !important;
+    &:hover {
+        background-color : $borderColor;
+        border-color     : darken($borderColor, 7.5%) !important;
+    }
+    &:active {
+        background-color : $bgColor !important;
+    }
+}
+
+
+//--------------Info--------------------
+.btn-info {
+    $bgColor : #f1f4f8;
+    $borderColor : darken($bgColor, 7.5%);
+    background-color : $bgColor;
+    border-color     : $borderColor !important;
+    color            : #4a4a4a !important;
+    &:hover {
+        background-color : $borderColor;
+        border-color     : darken($borderColor, 7.5%) !important;
+    }
+    &:active {
+        background-color : $bgColor !important;
+    }
+}
+
+
+//--------------Dark--------------------
+.btn-dark {
+    $bgColor : #062b5f;
+    $borderColor : darken($bgColor, 5%);
+    background-color : $bgColor;
+    border-color     : $borderColor !important;
+    color            : #ffffff !important;
+    &:hover {
+        background-color : $borderColor;
+        border-color     : darken($borderColor, 6.5%) !important;
+    }
+    &:active {
+        background-color : $bgColor !important;
+    }
+}
+
+
+//--------------Warning--------------------
+.btn-warning {
+    $bgColor : #f9ce2e;
+    $borderColor : darken($bgColor, 9.5%);
+    background-color : $bgColor;
+    border-color     : $borderColor !important;
+    color            : #000000 !important;
+    &:hover {
+        background-color : $borderColor;
+        border-color     : darken($borderColor, 8.5%) !important;
+    }
+    &:active {
+        background-color : $bgColor !important;
+    }
+}
+
+
+//--------------Success--------------------
+.btn-success {
+    $bgColor : #30a656;
+    $borderColor : darken($bgColor, 7.5%);
+    background-color : $bgColor;
+    border-color     : $borderColor !important;
+    color            : #ffffff !important;
+    &:hover {
+        background-color : $borderColor;
+        border-color     : darken($borderColor, 7.5%) !important;
+    }
+    &:active {
+        background-color : $bgColor !important;
+    }
+}
+
+
+.btn-outline-success {
+    @extend .btn-success;
+    $bgColor : #42b72a;
+    $borderColor : $bgColor;
+    background    : transparent;
+    border-color  : $borderColor !important;
+    border-radius : 8px !important;
+    color         : #000000 !important;
+    &:hover {
+        background-color : transparent !important;
+        border-color     : #42b72a !important;
+        color            : #42b72a !important;
+    }
+}
+
+
+//--------------Danger--------------------
+.btn-danger {
+    $bgColor : #e63a4f;
+    $borderColor : darken($bgColor, 10.5%);
+    background-color : $bgColor;
+    border-color     : $borderColor !important;
+    color            : #ffffff !important;
+    &:hover {
+        background-color : $borderColor;
+        border-color     : darken($borderColor, 10.5%) !important;
+    }
+    &:active {
+        background-color : $bgColor !important;
+    }
+}
+
+
+//--------------Light--------------------
+.btn-light {
+    $bgColor : #fafafa;
+    $borderColor : darken($bgColor, 7.5%);
+    background-color : $bgColor;
+    border-color     : $borderColor !important;
+    color            : #4a4a4a !important;
+    &:hover {
+        background-color : $borderColor;
+        border-color     : darken($borderColor, 8.5%) !important;
+    }
+    &:active {
+        background-color : $bgColor !important;
+    }
+}
+
+
+.btn-secondary {
+    $bgColor : linear-gradient(#ffffff, #efefef);
+    $borderColor : #b9bfcb;
+    background   : $bgColor;
+    border-color : $borderColor !important;
+    color        : #4a4a4a !important;
+    &:hover {
+        background   : linear-gradient(#f9f9f9, #ffffff);
+        border-color : darken($borderColor, 8.5%) !important;
+    }
+    &:active {
+        background : $bgColor !important;
+    }
+}
+
+
+.btn-addToCart {
+    background-color : #f9ce2e;
+    border-color     : #eaba09 !important;
+    color            : #000000;
+    height           : 40px;
+    line-height      : 27px !important;
+    position         : relative;
+    &:before {
+        background-color           : #eaba09;
+        border-bottom-right-radius : 5px;
+        border-top-right-radius    : 5px;
+        content                    : '';
+        height                     : 100%;
+        position                   : absolute;
+        right                      : 0;
+        top                        : 0;
+        width                      : 45px;
+    }
+    &:after {
+        background : url("/asset/img/button-addToCartIcon.svg") center center no-repeat;
+        content    : '';
+        height     : 100%;
+        position   : absolute;
+        right      : 0;
+        top        : 2px;
+        transition : .3s;
+        width      : 45px;
+    }
+    &:hover {
+        background-color : #eaba09;
+        transition       : .3s all;
+    }
+}
