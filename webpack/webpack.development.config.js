@@ -7,14 +7,13 @@ module.exports = [
     {
         name: 'client',
         mode: 'development',
-        target: "web",
+        target: 'web',
         devtool: 'source-map',
-        entry: `${srcDir}/client.js`,
+        entry: ['webpack-hot-middleware/client?name=client&reload=true', "@babel/polyfill", `${srcDir}/client.js`],
         output: {
             filename: "client.js",
             publicPath: "/dist/",
         },
-        devtool: 'source-map',
         module: {
             rules: [
                 {
@@ -57,9 +56,10 @@ module.exports = [
             new MiniCssExtractPlugin({
                 filename: 'style.css'
             }),
-            new Dotenv({
-                path: path.resolve(process.cwd(), '.env.development'),
-            }),
+            /*
+            * Add hot reloading plugin for enable hot reloading in your webpack
+            * this plugin for webpack hot middle ware
+            * */
             new webpack.HotModuleReplacementPlugin()
         ]
     },
@@ -110,6 +110,10 @@ module.exports = [
             ]
         },
         plugins: [
+            /*
+            * Add hot reloading plugin for enable hot reloading in your webpack
+            * this plugin for webpack hot middle ware
+            * */
             new webpack.HotModuleReplacementPlugin()
         ]
     }

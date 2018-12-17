@@ -6,5 +6,9 @@ export default ({markup, helmet}) => {
                     ${helmet.meta.toString()}
                     ${helmet.link.toString()}
                 </head>
-            </html>`
-}
+                <body>
+                    <div id="root">${markup}</div>
+                    <script  src="/dist/client.js" async></script>
+                </body>
+            </html>`;
+};
