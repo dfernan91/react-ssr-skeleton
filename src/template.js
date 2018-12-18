@@ -8,7 +8,7 @@ export default ({markup, helmet}) => {
                     ${helmet.meta.toString()}
                     ${helmet.link.toString()}
                     
-                    <link rel="stylesheet" href="/dist/styles.css?v=1"/>
+                    <link rel="stylesheet" href="/dist/styles.css"/>
                 </head>
                 <body>
                     <div id="root">${markup}</div>

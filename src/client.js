@@ -1,11 +1,15 @@
 import React from 'react';
-import {hydrate} from 'react-dom';
+import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import App from './App/App/App';
 //module
 import 'bootstrap';
 
-hydrate((
+
+const renderMethod = ReactDOM.render;
+
+
+renderMethod((
     <BrowserRouter>
         <App/>
     </BrowserRouter>

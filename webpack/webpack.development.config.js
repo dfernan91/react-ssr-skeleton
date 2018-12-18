@@ -11,17 +11,16 @@ module.exports = [
         mode: 'development',
         target: "web",
         devtool: 'source-map',
-        entry: `${srcDir}/client.js`,
+        entry: ['webpack-hot-middleware/client?name=client&reload=true', "@babel/polyfill", `${srcDir}/client.js`],
         output: {
             filename: "client.js",
             publicPath: "/dist/",
         },
-        devtool: 'source-map',
         module: {
             rules: [
                 {
                     test: /\.js$/,
-                    exclude: /(node_module[\\\/])/,
+                    exclude: /(node_modules[\\\/])/,
                     use: [
                         "babel-loader",
                         "eslint-loader"
@@ -71,7 +70,7 @@ module.exports = [
             *
             * */
             new MiniCssExtractPlugin({
-                filename: 'style.css'
+                filename: 'styles.css'
             }),
             /*
             * npm install dotenv and dotenv-webpack
