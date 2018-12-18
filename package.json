@@ -4,6 +4,7 @@
   "description": "this is a test project for learning ssr ",
   "main": "index.js",
   "scripts": {
+    "dev" : "NODE_ENV=development node --max_old_space_size=8000 ./express/development.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mossii.js",
@@ -14,6 +15,7 @@
     "dotenv": "^6.2.0",
     "dotenv-webpack": "^1.5.7",
     "isomorphic-style-loader": "^4.0.0",
+    "node-sass": "^4.11.0",
     "opn": "^5.4.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
