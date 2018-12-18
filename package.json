@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development node --max_old_space_size=8000 ./express/development.js",
+    "build" : "NODE_ENV=production webpack --config ./webpack/webpack.production.config.js --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mossii.js",
