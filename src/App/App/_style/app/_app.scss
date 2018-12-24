@@ -4,3 +4,23 @@
 .test{
     font-size : 100px;
 }
+
+
+.item{
+    height : 300px;
+    background-color : #d7d7d7;
+    padding: 15px;
+    text-align : center;
+    img{
+        height : 200px;
+        margin: 0 auto;
+        display : block;
+    }
+    span{
+        text-align : center;
+        margin-top: 15px;
+        display : block;
+        font-size : 16px;
+        font-weight : bold;
+    }
+}

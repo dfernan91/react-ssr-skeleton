@@ -1,0 +1,1 @@
+export const isExist = (entity) => typeof entity !== "undefined";
